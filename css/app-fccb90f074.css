@@ -1,0 +1,1085 @@
+@font-face {
+
+    font-family: 'proxima_nova_regular';
+
+    src: url('../fonts/proximanova-regular-webfont.eot?'),
+
+    	url('../fonts/proximanova-regular-webfont.woff2?') format('woff2'),
+
+        url('../fonts/proximanova-regular-webfont.woff?') format('woff'),
+
+        url('../fonts/proximanova-regular-webfont.ttf?') format('truetype'),
+
+        url('../fonts/proximanova-regular-webfont.svg?') format('svg');
+
+    font-weight: normal;
+
+    font-style: normal;
+
+}
+
+
+
+@font-face {
+
+    font-family: 'proxima_nova_semibold';
+
+    src: url('../fonts/proximanova-semibold-webfont.eot?'), 
+
+    	url('../fonts/proximanova-semibold-webfont.woff2?') format('woff2'),
+
+        url('../fonts/proximanova-semibold-webfont.woff?') format('woff'),
+
+        url('../fonts/proximanova-semibold-webfont.ttf?') format('truetype'),
+
+        url('../fonts/proximanova-semibold-webfont.svg?') format('svg');
+
+    font-weight: normal;
+
+    font-style: normal;
+
+
+
+}
+
+
+
+@font-face {
+
+    font-family: 'proxima_nova_light';
+
+    src: url('../fonts/proximanova-light-webfont.eot'),
+
+    	url('../fonts/proximanova-light-webfont.woff2') format('woff2'),
+
+        url('../fonts/proximanova-light-webfont.woff') format('woff'),
+
+        url('../fonts/proximanova-light-webfont.ttf') format('truetype'),
+
+        url('../fonts/proximanova-light-webfont.svg#proxima_novalight') format('svg');
+
+    font-weight: normal;
+
+    font-style: normal;
+
+
+
+}
+
+a.zoom, a.rotation, a.flip {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 30px;
+    width: 40px;
+    height: 40px;
+    line-height: 30px;
+    color: #FFFFFF;
+    margin-right: 49px;
+    vertical-align: middle;
+
+}
+
+.row {
+
+
+
+	*zoom: 1;
+
+}
+
+
+
+* {
+
+
+
+	outline: none;
+
+}
+
+
+
+select::-ms-expand {
+
+
+
+	display: none;
+
+}
+
+
+
+
+
+footer {
+
+
+
+	font-size: 12px;
+
+	text-align: center;
+
+	position: relative;
+
+	padding: 15px 0;
+
+	background-color: #000;
+
+	color: #ffffff;
+
+}
+
+
+
+footer p a {
+
+
+
+	color: #ffffff;
+
+}
+
+
+
+footer p a:hover {
+
+
+
+	opacity: .5;
+
+}
+
+
+
+footer p {
+
+
+
+	display: inline-block;
+
+	vertical-align: bottom;
+
+	margin: 0;
+
+	font-family: "futura_condensedmedium";
+
+	font-style: normal;
+
+	font-weight: 300;
+
+	padding-top: 7px;
+
+	font-size: 14px;
+
+	padding-left: 15px;
+
+}
+
+
+
+.content {
+
+	position: relative;
+
+	padding: 18px 10px 0;
+
+}
+
+#select-drag-control{
+	padding-top:20px;
+}
+#select-drag-control .customize-text{
+    text-transform: capitalize;
+    font-size: 22px;
+}
+#select-drag-control .custom-option {
+	margin:10px;
+	display:inline-block;
+	cursor: pointer;
+}
+
+#select-drag-control .custom-option.selected:before {
+	content:  "\2713 ";
+	padding-right: 8px;
+}
+
+@media only screen and (max-width: 830px) {
+
+	.content {
+
+		padding: 25px 5px 0;
+
+	}
+
+}
+
+
+
+.socials {
+
+
+
+	margin: 30px auto;
+
+}
+
+
+
+.socials a {
+
+	display: inline-block;
+    cursor:pointer;
+	margin-right: 30px;
+    vertical-align: middle;
+}
+a.restart {
+
+
+}
+
+
+.socials a:last-child {
+
+
+
+	margin-right: 0;
+
+}
+
+
+
+.socials span {
+
+
+
+	display: none;
+
+}
+
+
+
+.socials i {
+
+
+
+	font-size: 34px;
+
+	color: #000;
+
+}
+
+
+
+#final-image {
+
+
+
+	display: none;
+
+	background-color: #000;
+
+	text-align: center;
+
+}
+
+
+
+#share .socialsheader span.yeah {
+	margin-left: 10px;
+    vertical-align: baseline;
+
+}
+
+
+
+#share p {
+
+
+
+	font-size: 16px;
+
+	font-family: "gothambold";
+
+	font-style: normal;
+
+	font-weight: 400;
+
+	letter-spacing: 1px;
+
+}
+
+
+
+#share p span {
+
+    color: #fe9b44;
+
+    display: inline-block;
+
+    text-transform: uppercase;
+
+}
+
+
+
+#share .share-dialog {
+
+
+
+	display: none;
+
+}
+
+
+
+#share .share-dialog .caption {
+
+
+
+	margin: 20px auto;
+
+}
+
+
+
+#share .share-dialog .caption p {
+
+
+
+	color: inherit;
+
+	text-align: center;
+
+}
+
+
+
+#share .share-dialog .caption textarea {
+
+
+
+	width: 100%;
+
+	min-height: 100px;
+
+	max-width: 430px;
+
+	box-sizing: border-box;
+
+	padding: 10px;
+
+	border: 2px solid #000;
+
+	color: #000;
+	    font-size: 16px !important;
+
+}
+
+
+
+#share .share-dialog button, #share .share-dialog a {
+
+
+
+	margin: 20px auto;
+
+	display: inline-block;
+
+	max-width: 300px;
+
+	width: 100%;
+
+	background: #fff;
+
+	border-top: 1px solid #5b5b5b;
+
+	padding: 10px 0;
+
+	color: #000;
+
+	font-size: inherit;
+
+	text-decoration: none;
+
+}
+
+
+
+#share .share-dialog button i, #share .share-dialog a i {
+
+
+
+	/*vertical-align: middle;*/
+
+	display: inline-block;
+
+	margin-right: 10px;
+
+}
+
+
+
+#share .share-dialog button i.fa-instagram, #share .share-dialog a i.fa-instagram {
+
+
+
+	color: #fff;
+
+	margin-right: 9px;
+
+}
+
+
+
+#share .share-dialog button i.fa-twitter, #share .share-dialog a i.fa-twitter {
+  color: #fff;
+}
+
+#twitter a.tw:hover, #twitter a.tw:hover i.fa-twitter {
+    background: #fff;
+    color: #000;
+}
+
+#facebook a.fb {
+    background: #3b5998;
+    color: #fff;
+    font-size: 16px;
+    font-family: 'futura_condensedmedium';
+}
+#twitter a.tw {
+	background: #55acee;
+
+	color: #fff;
+
+	font-size: 16px;
+
+}
+
+
+
+#share {
+
+	text-align: center;
+
+	padding: 0 0 0;
+
+}
+
+
+
+#share .socials .error {
+
+	display: none;
+
+}
+
+
+
+
+
+
+#share .socials a i {
+
+
+
+	display: inline-block;
+
+	margin: 0;
+
+	font-size: 34px;
+
+	vertical-align: middle;
+
+}
+
+
+
+#facebookshare, #instagramshare, #twittershare{
+    color: #000;
+    padding: 12px 0;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    box-sizing: border-box;
+    display: inline-block;
+
+}
+
+
+
+
+
+
+
+
+
+
+html.touch #start-camera {
+
+
+
+	display: none;
+
+}
+
+
+
+html.touch .wrapper #controls .camera-upload form {
+
+
+
+	width: 100%;
+
+}
+
+
+
+@media only screen and (max-width: 568px) {
+
+
+
+	.wrapper {
+
+
+
+		/*max-width: 300px;*/
+
+
+
+		margin: 0 auto;
+
+	}
+
+
+
+	.wrapper #camera {
+
+
+
+		width: 300px;
+
+		height: 300px;
+
+	}
+
+
+
+	.lace-border {
+
+
+
+		height: 30px;
+
+	}
+
+
+
+	.directions {
+
+
+
+		width: 90%;
+
+		font-size: 20px;
+
+	}
+
+
+
+}
+
+
+
+/*HighValleySpecific CSS*/
+
+
+
+.topHeader {
+
+
+
+	font-size: 0;
+
+	max-width: 1300px;
+
+	margin: 0 auto;
+
+	text-transform: uppercase;
+
+}
+
+
+
+.leftHeader {
+
+
+
+	display: inline-block;
+
+	width: 70%;
+
+	font-size: 10px;
+
+	text-align: left;
+
+	font-family: "futura_condensedmedium";
+
+	font-style: normal;
+
+	font-weight: 500;
+
+	letter-spacing: 1px;
+
+}
+
+
+
+.leftHeader a {
+
+
+
+	text-decoration: underline;
+
+}
+
+
+
+.leftHeader a:hover {
+
+
+
+	color: #000;
+
+}
+
+
+
+.rightHeader {
+
+
+
+	display: inline-block;
+
+	width: 30%;
+
+	text-align: right;
+
+	letter-spacing: .5px;
+
+}
+
+
+
+.rightHeader a {
+
+
+
+	font-family: "futura_condensedmedium";
+
+	font-style: normal;
+
+	font-weight: 700;
+
+	font-size: 10px;
+
+}
+
+
+
+.rightHeader a:hover {
+
+
+
+	color: #000;
+
+}
+
+
+
+.mobileBreak {
+
+
+
+	display: none;
+
+}
+
+
+
+.desktopBreak {
+
+	display: block;
+
+}
+
+
+
+.highValleyLogo {
+
+	margin: 0 auto;
+
+}
+
+
+
+span.seprator {
+
+	font-size: 9px;
+
+}
+
+
+
+.contentText {
+
+    font-size: 20.77px;
+
+    font-family: "futura_condensedmedium";
+
+    padding: 40px 0 0;
+
+    line-height: 25px;
+
+}
+
+span.cta {
+
+    font-size: 33.24px;
+
+    font-family: "proxima_nova_bold", sans-serif;
+
+    line-height: 34px;
+
+    margin-bottom: 16px;
+
+}
+
+#feed p.hashTag {
+
+    font-size: 26px;
+
+    color: #fff;
+
+    font-family: "proxima_nova_semibold", sans-serif;
+
+    font-style: normal;
+
+    padding: 0 0 53px;
+
+    margin: 0;
+
+}
+
+
+
+#feed p.hashTag span {
+
+	color: #fe9b44;
+
+}
+
+
+
+.highValleyLogoFooter {
+
+	display: inline-block;
+
+	vertical-align: bottom;
+
+	width: 82px;
+
+}
+
+
+
+footer p a {
+
+
+
+	text-decoration: underline;
+
+}
+
+
+
+.bottomEnter {
+
+
+
+	font-size: 18px;
+
+	letter-spacing: 1px;
+
+	font-family: "futura_condensedmedium";
+
+	font-style: normal;
+
+	font-weight: 400;
+
+	padding: 0 0 55px;
+
+}
+
+
+
+button.export:hover {
+
+
+
+	opacity: .5;
+
+}
+
+
+
+.bottomEnter span {
+
+
+
+	text-transform: uppercase;
+
+	padding-left: 8px;
+
+	font-family: "futura_condensedmedium";
+
+	font-style: normal;
+
+	font-weight: 400;
+
+	letter-spacing: .5px;
+
+}
+
+
+
+.chooseOption {
+
+
+
+	display: none;
+
+	bottom: 20px;
+
+	position: absolute;
+
+	width: 100%;
+
+	z-index: 999;
+
+	color: #000;
+
+	font-size: 12px;
+
+	font-family: "futura_condensedmedium";
+
+	font-style: normal;
+
+	font-weight: 400;
+
+}
+
+
+
+.imageUploadedText {
+
+
+
+	text-transform: uppercase;
+
+	color: #fff;
+
+	display: none;
+
+	opacity: .7;
+
+	font-size: 16px;
+
+	font-family: "futura_condensedmedium";
+
+	font-style: normal;
+
+	font-weight: 400;
+
+	margin-bottom: 30px;
+
+}
+
+
+
+.chooseFrame {
+
+
+
+	font-size: 16px;
+
+	color: #fff;
+
+	opacity: .7;
+
+	text-transform: uppercase;
+
+	font-family: "futura_condensedmedium";
+
+	font-style: normal;
+
+	font-weight: 400
+
+}
+
+
+
+.chooseFrame.mobileOnly, .chooseFrame.desktopOnly, .export, .chooseNav {
+
+
+
+	display: none;
+
+}
+
+
+
+button.export {
+
+
+
+	background: transparent;
+
+	margin: 25px 0;
+
+	text-transform: uppercase;
+
+	outline: none;
+
+	padding: 7px 40px;
+
+	font-size: 26px;
+
+	border: 1px solid #fff;
+
+	letter-spacing: 1px;
+
+}
+
+
+
+a.save-image-btn {
+
+
+
+	font-size: 22.15px;
+
+	letter-spacing: 1px;
+
+	margin-right: 10px;
+
+	font-style: normal;
+
+	font-weight: 400;
+
+}
+
+
+
+a.save-image-btn.disabled {
+
+
+
+	pointer-events: none;
+
+	cursor: default;
+
+	opacity: .5;
+
+}
+
+
+
+button.restart {
+
+
+
+	background: transparent;
+
+	text-transform: uppercase;
+
+	outline: none;
+
+	border: none;
+
+	font-size: 16px;
+
+	letter-spacing: 1px;
+
+	font-family: "futura_condensedmedium";
+
+	font-style: normal;
+
+	font-weight: 400;
+
+}
+
+
+@media only screen and (max-width: 767px) {
+	#select-drag-control .customize-text{
+		font-size: 15px;
+	}
+	#select-drag-control .share-download{
+		width: 130px;
+	    font-size: 15px;
+	    height: 40px;
+	    line-height: 33px;
+	    margin-top: 25px;
+	}
+	#share {
+		padding:0;
+	}
+	#share .socials a i{
+		font-size: 25px;
+		    color: #8e8e8d;
+	}
+	a.save-image-btn{
+	    margin-right: 15px;
+	    background: url(../images/download.png) no-repeat scroll center center transparent;
+	    text-indent: -9999px;
+	    border: none;
+	    border-right: 1px solid #aaa;
+	    background-size: 23px auto;
+	    padding: 40px 0;
+	     cursor:pointer;
+	}
+	a.share-container {
+	    background: url(../images/share.png) no-repeat scroll center center transparent;
+	    text-indent: -9999px;
+	    border: none;
+	    background-size: 30px auto;
+	    padding: 40px 0;
+	    cursor:pointer;
+	}
+	#facebookshare, #instagramshare, #twittershare {
+    padding: 7px 0;
+    border:3px solid #8e8e8d;
+    width: 43px;
+    height: 43px;
+   }
+#share .socialsheader span.yeah {
+    margin-left: 5px;
+    background-size: 16px auto;
+    height: 12px;
+}
+   a.restart,.repyourcolors {
+	    font-size: 12px;
+	    background-color: transparent;
+    	color: #000;
+	}
+	a.restart:before, a.restart:after {
+	    content: " // ";
+	}
+	a.zoom, a.rotation, a.flip{
+		margin-right: 30px;
+		font-size: 30px;
+	    width: 30px;
+	    height: 30px;
+	}
+}
+
+
