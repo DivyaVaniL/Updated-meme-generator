@@ -1,0 +1,105 @@
+<script
+  src="https://code.jquery.com/jquery-2.2.4.min.js"
+  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+  crossorigin="anonymous"></script>
+<div id="fb-root"></div>
+<script>
+			window.fbAsyncInit = function() {
+				FB.init({
+					appId : 366646823821139,
+					cookie : true,
+					xfbml : true,
+					version : 'v2.3'
+				});
+				FB.getLoginStatus(function(response) {
+					console.log(response);
+					var fbApiInitEvent = new CustomEvent("fbApiInit", {
+						'detail' : {
+							'response' : response
+						}
+					});
+					window.dispatchEvent(fbApiInitEvent);
+				});
+			}; ( function(d, s, id) {
+					var js,
+					    fjs = d.getElementsByTagName(s)[0];
+					if (d.getElementById(id)) {
+						return;
+					}
+					js = d.createElement(s);
+					js.id = id;
+					js.src = "//connect.facebook.net/en_US/sdk.js";
+					fjs.parentNode.insertBefore(js, fjs);
+				}(document, 'script', 'facebook-jssdk'));
+
+		</script>
+
+<div class="page-header">
+  <h1>Share Dialog</h1>
+</div>
+
+<p>Click the button below to trigger a Share Dialog</p>
+
+<div id="shareBtn" class="btn btn-success clearfix">Share</div>
+
+<p style="margin-top: 50px">
+  <hr />
+  <a class="btn btn-small"  href="https://developers.facebook.com/docs/sharing/reference/share-dialog">Share Dialog Documentation</a>
+</p>
+
+<script>
+$(document).ready(function() {
+    var postFBPhoto;
+    console.log("sharing");
+   // $('#twitter .caption textarea').val('I created a custom @HighValley #HVShesWithMe photo frame! Get yours here: https://highvalley.photomusicbooth.com/sheswithme');
+   // $('#facebook .caption textarea').val('I created a custom @HighValley #HVShesWithMe photo frame! Get yours here: https://highvalley.photomusicbooth.com/sheswithme');
+    postFBPhoto = function(caption, path) {
+        return FB.api('/me/photos', 'post', {
+            "caption": caption,
+            "url": path
+        }, function(res) {
+            console.log(res);
+            if (res.post_id) {
+                return $('#facebook').html("<h3>Photo posted successfully!</h3>");
+            }
+        });
+    };
+    $('#shareBtn').click(function(e) {
+        var caption, imgpath;
+        e.preventDefault();
+        caption = "er";
+        imgpath = "er";
+        console.log(caption, imgpath);
+        FB.getLoginStatus(function(response) {
+            if (response.status === 'connected') {
+                console.log('Logged in.');
+                postFBPhoto(caption, imgpath);
+            } else {
+                console.log('Not Logged In');
+                FB.login(function() {
+                    console.log("Logged into FB");
+                    postFBPhoto(caption, imgpath);
+                    return true;
+                }, {
+                    scope: 'publish_actions'
+                });
+            }
+            return true;
+        });
+        return true;
+    });
+    true;
+});
+
+/* FB.api('/me/feed', 'post', {
+      message:'my_message',
+      access_token:'EAACEdEose0cBAGVZCB0hixzVYklpZAhsV4idCfk2O70yMBLJchPmzCaZBHoCYZBUGmBKLo7Ji1gvJhHr9YcMGVH3r3ehAFTOlchZC0X51eI4asaexV6cKGnv8QoJcllE3qQFBfhd4nB8zdGDB0lMVXPZCygjezpzlzKFfrgJLMhKEglIijQdPqaewHOkyaJYwZD',
+      link:'http://www.fbrell.com',
+      picture:'http://staging.weate.ch.stage18.535e.blackmesh.com/atl/panicmadness/images/OG.jpg',
+      name: 'Post name',
+      description: 'description'
+  },function(data) {
+      console.log(data);
+ });
+}*/
+</script>
